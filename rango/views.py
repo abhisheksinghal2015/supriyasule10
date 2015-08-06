@@ -68,7 +68,7 @@ def editview(request):
         c.complaint_type = comp_type.objects.get(type=request.POST.get('complaint_type'))
         c.descrip = request.POST.get('descrip')
         c.acc_person= office_staff.objects.get(name=request.POST.get('acc_person'))
-        c.status = status.objects.get(complaint_status_icontains=request.POST.get('status'))
+        c.status = status.objects.get(complaint_status__icontains=request.POST.get('status'))
         c.status_remarks = request.POST.get('status_remarks')
         c.save()
         dict = {'complaint':c}
