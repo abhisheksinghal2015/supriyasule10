@@ -1066,7 +1066,7 @@ position: relative;
 			<form action="/rango/edit/" method="post">
                 {% csrf_token %}
                 <input type="hidden" name="complaint_id" value="{{ complaint.id }}">
-                <div> <div class="form_3">Description</div>  <div class="form_4"> <textarea rows="3" cols="46">{{ complaint.descrip }}</textarea> </div></div><br><br><br><br>
+                <div> <div class="form_3">Description</div>  <div class="form_4"> <textarea name="descrip" rows="3" cols="46">{{ complaint.descrip }}</textarea> </div></div><br><br><br><br>
                  <div class="form_3">Complaint Type</div>  <div class="form_4"> <input type="text" size="50" name="complaint_type" id="username1" value="{{ complaint.complaint_type }}"></div><br>
 
             <div><div class="form_3">Complaint Status</div> <div class="form_4"><select name="status" style="width:353px; " ><option>On the Job</option><option>Resolved</option><option>Not yet started</option></select></div></div><br>
