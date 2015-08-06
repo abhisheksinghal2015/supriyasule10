@@ -1069,7 +1069,7 @@ position: relative;
                 <div> <div class="form_3">Description</div>  <div class="form_4"> <textarea rows="3" cols="46">{{ complaint.descrip }}</textarea> </div></div><br><br><br><br>
                  <div class="form_3">Complaint Type</div>  <div class="form_4"> <input type="text" size="50" name="complaint_type" id="username1" value="{{ complaint.complaint_type }}"></div><br>
 
-            <div><div class="form_3">Complaint Status</div> <div class="form_4"><select style="width:353px; " ><option>Resolved</option><option>On the job</option><option>Not yet started</option></select></div></div><br>
+            <div><div class="form_3">Complaint Status</div> <div class="form_4"><select name="status" style="width:353px; " ><option>On the Job</option><option>Resolved</option><option>Not yet started</option></select></div></div><br>
             <div> <div class="form_3">Status Remarks</div> <div class="form_4"> <input type="text" name="status_remarks" size="50" id="username1" value="{{ complaint.status_remarks }}"></div></div><br>
              <div><div class="form_3">Name of Complainant</div>  <div class="form_4"> <input type="text" name="fname" size="50" id="username1" value="{{ complaint.fname }}"></div></div><br>
             <div class="form_3">Date of Birth</div>  <div class="form_4"> <input type="text" size="50" name="birth_date" id="username1" value="{{ complaint.birth_date }}"></div><br>
