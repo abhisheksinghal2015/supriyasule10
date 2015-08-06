@@ -5,17 +5,17 @@ import django
 # Create your models here.
 
 class status(models.Model):
-    complaint_status = models.CharField(max_length=10)
+    complaint_status = models.CharField(max_length=25)
     def __unicode__(self):
         return self.complaint_status
 
 class offices(models.Model):
-    office_name = models.CharField(max_length=20,unique=True)
+    office_name = models.CharField(max_length=30,unique=True)
     def __unicode__(self):
         return self.office_name
 
 class comp_type(models.Model):
-    type = models.CharField(max_length=30)
+    type = models.CharField(max_length=50)
     def __unicode__(self):
         return self.type
 
@@ -36,7 +36,7 @@ class village(models.Model):
         return self.village_name
 
 class ComplaintView(models.Model):
-    search = models.CharField(max_length=50,blank=True,null=True)
+    search = models.CharField(max_length=70,blank=True,null=True)
     start_date = models.DateField(null=True,blank=True)
     end_date = models.DateField(null=True,blank=True)
     office = models.ForeignKey('offices',null=True,blank=True  )
