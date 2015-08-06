@@ -1067,7 +1067,7 @@ position: relative;
                 {% csrf_token %}
                 <input type="hidden" name="complaint_id" value="{{ complaint.id }}">
                 <div> <div class="form_3">Description</div>  <div class="form_4"> <textarea name="descrip" rows="3" cols="51">{{ complaint.descrip }}</textarea> </div></div><br><br><br><br>
-                 <div class="form_3">Complaint Type</div>  <div class="form_4"><select name="complaint_type" selected="{{complaint.comp_type}}" style="width:385px; " ><option>Tourism</option><option>Environment related</option><option>Traffic and road safety</option><option>Land and property enroachment</option>
+                 <div class="form_3">Complaint Type</div>  <div class="form_4"><select name="complaint_type" value="{{complaint.comp_type}}" selected="{{complaint.comp_type}}" style="width:385px; " ><option>Tourism</option><option>Environment related</option><option>Traffic and road safety</option><option>Land and property enroachment</option>
                  <option>Public Transport</option><option>Sanitation facilities</option><option>Medical emergencies</option><option>Other personal complaints</option>
                  <option>Job related</option><option>Garbage</option><option>Crime and safety</option><option>Water supply</option><option>Electricity related</option><option>Road and road maintainance</option></select></div><br>
 
