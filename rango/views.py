@@ -160,7 +160,7 @@ def view_complaint(request):
             return render(request,'rango/homepage.html',dict)
     else:
         print 'You must be logged in first'
-        return HttpResponse('not logged in')
+        return HttpResponseRedirect('/rango/login/')
 
 def add_complaint(request):
      # A HTTP POST?
@@ -187,7 +187,7 @@ def add_complaint(request):
         # Render the form with error messages (if any).
         return render(request, 'add_form/add_form.html',{'form':form} )
     else:
-     render_to_response("Not logged in.")
+     return HttpResponseRedirect('/rango/login/')
 
 def confirmview(request):
 
