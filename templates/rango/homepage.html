@@ -1067,20 +1067,18 @@ position: relative;
                 {% csrf_token %}
                 <input type="hidden" name="complaint_id" value="{{ complaint.id }}">
                 <div> <div class="form_3">Description</div>  <div class="form_4"> <textarea name="descrip" rows="3" cols="51">{{ complaint.descrip }}</textarea> </div></div><br><br><br><br>
-                 <div class="form_3">Complaint Type</div>  <div class="form_4"><select name="complaint_type" value="{{complaint.comp_type}}" selected="{{complaint.comp_type}}" style="width:385px; " ><option>Tourism</option><option>Environment related</option><option>Traffic and road safety</option><option>Land and property enroachment</option>
-                 <option>Public Transport</option><option>Sanitation facilities</option><option>Medical emergencies</option><option>Other personal complaints</option>
-                 <option>Job related</option><option>Garbage</option><option>Crime and safety</option><option>Water supply</option><option>Electricity related</option><option>Road and road maintainance</option></select></div><br>
+                 <div class="form_3">Complaint Type</div>  <div class="form_4">{{form.complaint_type}}</div><br>
 
             <div><div class="form_3">Complaint Status</div> <div class="form_4">{{form.status}}</div></div><br>
             <div> <div class="form_3">Status Remarks</div> <div class="form_4"> <input type="text" name="status_remarks" size="50" id="username1" value="{{ complaint.status_remarks }}"></div></div><br>
              <div><div class="form_3">Name of Complainant</div>  <div class="form_4"> <input type="text" name="fname" size="50" id="username1" value="{{ complaint.fname }}"></div></div><br>
             <div class="form_3">Date of Birth</div>  <div class="form_4"> <input type="text" size="50" name="birth_date" id="username1" value="{{ complaint.birth_date }}"></div><br>
             <div class="form_3">Village</div>  <div class="form_4"> <input type="text"size="50" name="village" id="username1" value="{{ complaint.village }}"></div><br>
-            <div class="form_3">Taluka</div>  <div class="form_4"><select name="taluka" selected="{{complaint.taluka}}" style="width:385px;"><option>Baramati</option><option>Purandar</option><option>Vehle</option><option>Bhor</option><option>Indapur</option><option>Daund</option><option>Mulshi</option><option>Others</option></select> </div><br>
+            <div class="form_3">Taluka</div>  <div class="form_4{{form.taluka}} </div><br>
             <div class="form_3">Email</div>  <div class="form_4"> <input type="text" size="50" name="email" id="username1" value="{{ complaint.email }}"></div><br>
             <div class="form_3">Contact No</div>   <div class="form_4"> <input type="text" size="50" name="mob" id="username1" value="{{ complaint.mob }}"></div><br>
             <div><div class="form_3">Complaint Taker</div>  <div class="form_4"> <input type="text" name="complaint_taker" size="50" id="username1" value="{{ complaint.complaint_taker }}"></div></div><br>
-            <div><div class="form_3">Concerned Office</div>  <div class="form_4"><select name="office" selected="{{complaint.office}}" style="width:385px;"><option>Pune</option><option>Delhi</option><option>Mumbai</option><option>Baramati</option><option>Purandar</option><option>Vehle</option><option>Bhor</option><option>Indapur</option><option>Daund</option><option>Mulshi</option></select></div></div><br>
+            <div><div class="form_3">Concerned Office</div>  <div class="form_4">{{form.office}}</div></div><br>
 
             <div class="form_3">Concerned Person</div>  <div class="form_4"> <input type="text" size="50" name="acc_person" id="username1" value="{{ complaint.acc_person }}"></div><br>
 
